@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{console.log('Bootstrap assignment loaded');document.querySelectorAll('.btn').forEach(b=>b.addEventListener('click',()=>alert('Thank you for visiting!')));});

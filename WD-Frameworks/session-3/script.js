@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.nav-link').forEach(l=>l.onclick=()=>console.log(l.textContent));const c=document.querySelector('.carousel');if(c)c.addEventListener('slid.bs.carousel',()=>console.log('Slide changed'));});

@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{console.log('Tailwind CSS Page Loaded Successfully!');document.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>alert('Thank you for clicking!')));});

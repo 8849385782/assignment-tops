@@ -1,0 +1,1 @@
+console.log('Bootstrap Demo Loaded');const b=document.querySelector('.btn-success');if(b){b.onclick=e=>{e.preventDefault();alert('Now Playing Your Playlist 🎵')}}document.querySelectorAll('.list-group-item').forEach(i=>i.onclick=()=>alert('Opening '+i.innerText));

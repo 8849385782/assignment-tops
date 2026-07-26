@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{console.log('Project Loaded Successfully');document.querySelectorAll('.btn').forEach(b=>b.onclick=()=>alert('Thank you for using our service!'));document.querySelectorAll('.nav-link').forEach(l=>l.onclick=()=>console.log(l.textContent+' clicked'));});

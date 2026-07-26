@@ -1,0 +1,1 @@
+(()=>{'use strict';document.querySelectorAll('.needs-validation').forEach(f=>f.addEventListener('submit',e=>{if(!f.checkValidity()){e.preventDefault();e.stopPropagation()}else{e.preventDefault();alert('Successfully Submitted')}f.classList.add('was-validated')}));})();

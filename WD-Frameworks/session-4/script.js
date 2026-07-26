@@ -1,0 +1,1 @@
+(()=>{'use strict';const forms=document.querySelectorAll('.needs-validation');Array.from(forms).forEach(f=>f.addEventListener('submit',e=>{if(!f.checkValidity()){e.preventDefault();e.stopPropagation()}else{e.preventDefault();alert('Form Submitted Successfully ✅')}f.classList.add('was-validated')}));})();
