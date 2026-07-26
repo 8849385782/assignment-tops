@@ -1,0 +1,131 @@
+/* ========= Shared base styles ========= */
+body {
+  padding-top: 40px;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+/* ========= Table page ========= */
+body.page-table {
+  background: #fff8f0;
+}
+
+.food-card {
+  max-width: 800px;
+  margin: auto;
+}
+
+.page-table h2 {
+  color: #e23744;
+}
+
+.page-table th {
+  background: #e23744 !important;
+  color: #fff;
+}
+
+.price {
+  font-weight: 600;
+  color: #28a745;
+}
+
+/* ========= Ordered list page ========= */
+body.page-list-ordered {
+  background: #f5f6ff;
+}
+
+.list-card {
+  max-width: 700px;
+  margin: auto;
+}
+
+.page-list-ordered h2 {
+  color: #c4242b;
+}
+
+.page-list-ordered ol.list-group li {
+  font-size: 1.05rem;
+}
+
+/* ========= Form page ========= */
+body.page-form {
+  background: #eef2f7;
+}
+
+.form-card {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+}
+
+.page-form h2 {
+  color: #2874f0;
+}
+
+.btn-flipkart {
+  background: #2874f0;
+  border: none;
+  color: #fff;
+}
+
+.btn-flipkart:hover {
+  background: #1a5cc8;
+  color: #fff;
+}
+
+#successMsg {
+  display: none;
+}
+
+/* ========= Iframe page ========= */
+body.page-iframe {
+  background: #0b1a3a;
+  color: #fff;
+}
+
+.page-iframe h2 {
+  color: #f9a825;
+}
+
+.video-card {
+  max-width: 620px;
+  margin: auto;
+  background: #142850;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .4);
+}
+
+.video-card iframe {
+  border-radius: 8px;
+  border: none;
+}
+
+/* ========= Unordered list page ========= */
+body.page-list-unordered {
+  background: #fdf6ec;
+}
+
+.app-card {
+  max-width: 650px;
+  margin: auto;
+}
+
+.page-list-unordered h2 {
+  color: #833ab4;
+}
+
+.app-item {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.feature-list {
+  list-style: circle;
+  margin-top: 6px;
+}
