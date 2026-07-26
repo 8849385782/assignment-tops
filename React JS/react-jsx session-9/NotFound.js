@@ -1,0 +1,1 @@
+import {Link} from 'react-router-dom'; export default ()=> <div className='text-center'><h1 className='text-danger'>404</h1><p>Page Not Found</p><Link className='btn btn-primary' to='/'>Go Home</Link></div>;

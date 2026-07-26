@@ -1,0 +1,2 @@
+import {useContext} from "react"; import UserContext from "../context/UserContext";
+export default function Navbar(){const u=useContext(UserContext);return <nav className="navbar navbar-dark bg-primary"><div className="container"><span className="navbar-brand">Welcome {u.username}</span></div></nav>}

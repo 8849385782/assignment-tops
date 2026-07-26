@@ -1,0 +1,1 @@
+import {useEffect,useState} from 'react';export default function AutoFetchComponent(){const[data,setData]=useState('Loading...');useEffect(()=>{fetch('https://jsonplaceholder.typicode.com/posts/2').then(r=>r.json()).then(d=>setData(d.title)).catch(()=>setData('Error'));},[]);return <div className='card p-3'><h4>Auto Fetch</h4><p>{data}</p></div>}

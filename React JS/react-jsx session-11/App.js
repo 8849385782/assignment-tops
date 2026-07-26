@@ -1,0 +1,2 @@
+import MovieList from './components/MovieList';import AddPlaylist from './components/AddPlaylist';import RestaurantSearch from './components/RestaurantSearch';import AddComment from './components/AddComment';
+export default function App(){return <div className='container py-4'><h2>Axios & API Integration Assignment</h2><MovieList/><AddPlaylist/><RestaurantSearch/><AddComment/></div>}

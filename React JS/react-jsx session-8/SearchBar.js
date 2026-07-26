@@ -1,0 +1,1 @@
+import {useEffect,useRef} from 'react';export default function SearchBar(){const r=useRef();useEffect(()=>{r.current.focus()},[]);return <div className='card p-3'><h4>Search</h4><input ref={r} className='form-control' placeholder='Search'/><button className='btn btn-primary mt-2'>Search</button></div>}

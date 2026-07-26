@@ -1,0 +1,1 @@
+export default ()=> <div className='card p-4 shadow'><h2>Welcome to Flipkart</h2><p>Shop amazing products.</p><button className='btn btn-primary'>Shop Now</button></div>;

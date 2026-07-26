@@ -1,0 +1,1 @@
+export default function Home(){return <div className='card p-3'><h2>Welcome to My Music Player</h2><p>This app is ready for Netlify deployment.</p></div>}

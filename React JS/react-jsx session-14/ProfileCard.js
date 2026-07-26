@@ -1,0 +1,1 @@
+export default function ProfileCard({name,image,bio}){return <div className='card profile text-center p-3'><img src={image} alt={name} className='rounded-circle mx-auto' width='150'/><h3 className='mt-3'>{name}</h3><p>{bio}</p></div>}

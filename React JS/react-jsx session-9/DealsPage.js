@@ -1,0 +1,1 @@
+export default ()=> <div className='row'><div className='col-md-4'><div className='card p-3 shadow'><h4>Smartphone</h4><p>40% OFF</p></div></div><div className='col-md-4'><div className='card p-3 shadow'><h4>Laptop</h4><p>25% OFF</p></div></div><div className='col-md-4'><div className='card p-3 shadow'><h4>Headphones</h4><p>55% OFF</p></div></div></div>;

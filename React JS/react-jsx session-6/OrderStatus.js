@@ -1,0 +1,1 @@
+export default function OrderStatus({isDelivered}){return <div className='card'><h4>Order Status</h4><div className={isDelivered?'alert alert-success':'alert alert-warning'}>{isDelivered?'Order Delivered':'Order Pending'}</div></div>}

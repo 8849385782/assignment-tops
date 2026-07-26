@@ -1,0 +1,2 @@
+/* Copilot suggestion: Create a reusable ProjectCard component that accepts title, description, image, technologies and link props, then display them in a Bootstrap card for easy reuse across portfolio pages. */
+export default function ProjectCard({title,description}){return <div className='card p-3'><h4>{title}</h4><p>{description}</p><button className='btn btn-primary'>View Project</button></div>}
