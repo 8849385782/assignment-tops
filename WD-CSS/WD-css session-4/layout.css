@@ -1,0 +1,127 @@
+/* =========================================================
+   layout.css
+   Covers: block / inline / inline-block / none,
+   float two-column layout, and the ::after clearfix technique.
+   ========================================================= */
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* -------------------------------------------------------
+   INSTAGRAM-STYLE NAV
+   Each menu item is inline-block: sits side by side like
+   "inline", but still accepts width/height like "block".
+   ------------------------------------------------------- */
+.insta-nav {
+  background-color: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 10px 0;
+}
+
+.insta-logo {
+  font-family: 'Segoe UI', cursive, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.insta-menu {
+  list-style: none;
+}
+
+.insta-menu-item {
+  display: inline-block;   /* key property for this exercise */
+  width: 90px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-left: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.insta-menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* -------------------------------------------------------
+   DISPLAY PROPERTY DEMOS
+   ------------------------------------------------------- */
+.demo-section {
+  padding: 10px 14px;
+  border: 2px dashed #888;
+  margin-bottom: 4px;
+}
+
+/* BLOCK: full width, always starts a new line, width/height respected */
+.display-block-demo {
+  display: block;
+  width: 400px;
+  height: 70px;
+  background-color: #cfe8ff;
+}
+
+/* INLINE: flows with text, width/height are IGNORED by the browser */
+.display-inline-demo {
+  display: inline;
+  width: 200px;   /* ignored - inline elements size to their content */
+  height: 100px;  /* ignored - inline elements size to their content */
+  background-color: #ffe0b3;
+}
+
+/* INLINE-BLOCK: flows side by side, but width/height ARE respected */
+.display-inline-block-demo {
+  display: inline-block;
+  width: 180px;
+  height: 80px;
+  background-color: #d4f7d4;
+  vertical-align: top;
+  margin-right: 8px;
+}
+
+/* NONE: removed entirely from layout, takes up no space */
+.display-none-demo {
+  display: none;
+}
+
+/* -------------------------------------------------------
+   FLIPKART-STYLE TWO-COLUMN FLOAT LAYOUT
+   ------------------------------------------------------- */
+.product-list {
+  float: left;
+  width: 65%;
+  box-sizing: border-box;
+  padding-right: 15px;
+}
+
+.sidebar-cart {
+  float: right;
+  width: 33%;
+  box-sizing: border-box;
+  background-color: #fff8e7;
+  border: 1px solid #f0d78c;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #fff;
+}
+
+/* -------------------------------------------------------
+   CLEARFIX TECHNIQUE
+   Without this, .clearfix-container would collapse to
+   0 height because both children are floated and removed
+   from the normal document flow.
+   ------------------------------------------------------- */
+.clearfix-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}

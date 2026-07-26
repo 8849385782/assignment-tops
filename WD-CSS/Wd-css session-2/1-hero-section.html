@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Task 1 — Hero Section Banner</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Fonts: Sora for the display headline, Inter for body copy -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+  /* ---- Lesson CSS for Task 1 ---- */
+  body { font-family: 'Inter', sans-serif; }
+
+  .hero-banner {
+    /* Gradient background: two colors, 135deg diagonal */
+    background-image: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);
+    color: #ffffff;
+    padding: 6rem 1.5rem;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .hero-banner h1 {
+    font-family: 'Sora', sans-serif; /* custom font #1: headline */
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .hero-banner p.subtitle {
+    font-family: 'Inter', sans-serif; /* custom font #2: body */
+    font-weight: 400;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .hero-banner .btn-cta {
+    background: #ffffff;
+    color: #6D28D9;
+    font-weight: 600;
+    border: none;
+  }
+  .hero-banner .btn-cta:hover { background: #f5f0ff; }
+</style>
+</head>
+<body>
+
+<nav class="navbar demo-nav px-3">
+  <a href="index.html" class="brand text-decoration-none text-dark">← Back to index</a>
+  <span class="text-muted small">Task 1: Hero Section Banner</span>
+</nav>
+
+<!-- ============ THE ACTUAL DEMO ============ -->
+<section class="hero-banner text-center">
+  <div class="container">
+    <p class="task-badge mb-3" style="color:rgba(255,255,255,.7);">New · Launching this week</p>
+    <h1 class="display-4 mb-3">Design that ships itself.</h1>
+    <p class="subtitle fs-5 mb-4 mx-auto" style="max-width:560px;">
+      A gradient hero built with plain CSS — no images, no canvas — just
+      <code style="background:rgba(255,255,255,.15); color:#fff; padding:2px 6px; border-radius:4px;">linear-gradient()</code> and two Google Fonts.
+    </p>
+    <a href="#" class="btn btn-cta btn-lg px-4">Get started</a>
+  </div>
+</section>
+<!-- ============ END DEMO ============ -->
+
+<main class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="code-note">
+        <h2 class="h6">How it works</h2>
+        <ul class="mb-0 small">
+          <li><code>background-image: linear-gradient(135deg, #6D28D9, #DB2777)</code> paints the two-stop diagonal gradient.</li>
+          <li><strong>Sora</strong> (weight 800) is used only on the <code>&lt;h1&gt;</code> for a bold display headline.</li>
+          <li><strong>Inter</strong> (weight 400/500) is used on the subtitle and button for clean readability.</li>
+          <li>Text color is set to white / near-white so it stays readable against the dark gradient.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2 class="h6">Live validation</h2>
+      <div class="border rounded p-2">
+        <pre id="validation-output" class="validation-box mb-2">Running checks…</pre>
+        <button id="run-validation-btn" class="btn btn-sm btn-outline-dark">Re-run validation</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="demo-footer text-center py-3">Task 1 of 6 — Hero Section Banner</footer>
+
+<script src="validate.js"></script>
+<script>
+  function pageChecks() {
+    const hero = document.querySelector('.hero-banner');
+    const h1 = document.querySelector('.hero-banner h1');
+    const p = document.querySelector('.hero-banner p.subtitle');
+    const heroStyle = getComputedStyle(hero);
+    const h1Style = getComputedStyle(h1);
+    const pStyle = getComputedStyle(p);
+
+    return [
+      {
+        label: "Hero background uses a linear-gradient",
+        test: () => heroStyle.backgroundImage.includes('linear-gradient')
+      },
+      {
+        label: "Headline font-family is Sora",
+        test: () => h1Style.fontFamily.toLowerCase().includes('sora')
+      },
+      {
+        label: "Headline font-weight is bold (>=700)",
+        test: () => parseInt(h1Style.fontWeight) >= 700
+      },
+      {
+        label: "Subtitle font-family is Inter (different from headline)",
+        test: () => pStyle.fontFamily.toLowerCase().includes('inter')
+      },
+      {
+        label: "Hero text color is white/near-white",
+        test: () => {
+          const rgb = heroStyle.color.match(/\d+/g).map(Number);
+          return rgb.every(v => v > 230);
+        }
+      }
+    ];
+  }
+</script>
+
+</body>
+</html>

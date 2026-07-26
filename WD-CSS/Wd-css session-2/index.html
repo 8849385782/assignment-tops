@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CSS Module: Colors, Backgrounds &amp; Typography — Demo Index</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, .card-title { font-family: 'Poppins', sans-serif; }
+  .hub-hero {
+    background: linear-gradient(135deg, #1c1b1f 0%, #3a3648 100%);
+    color: #fff;
+  }
+  .task-card { border: 1px solid #e4e1da; border-radius: 12px; transition: transform .15s ease, box-shadow .15s ease; }
+  .task-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,.08); }
+</style>
+</head>
+<body>
+
+<nav class="navbar demo-nav px-3">
+  <span class="brand">CSS Module 3</span>
+  <span class="text-muted small">Colors · Backgrounds · Typography</span>
+</nav>
+
+<header class="hub-hero py-5 mb-5">
+  <div class="container">
+    <p class="task-badge text-white-50 mb-2">6 separate demo pages</p>
+    <h1 class="display-5 fw-bold">Colors, Backgrounds &amp; Typography</h1>
+    <p class="lead mb-0" style="max-width:640px;">Six standalone HTML/CSS/JS pages, each built with Bootstrap and each with its own on-page validation script confirming the styles actually applied.</p>
+  </div>
+</header>
+
+<main class="container pb-5">
+  <div class="row g-4">
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card task-card h-100 p-3">
+        <div class="card-body">
+          <p class="task-badge text-primary mb-1">Task 1</p>
+          <h2 class="card-title h5">Hero Section Banner</h2>
+          <p class="text-muted small">Gradient background + custom Google Fonts headline.</p>
+          <a href="1-hero-section.html" class="btn btn-dark btn-sm">Open page →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card task-card h-100 p-3">
+        <div class="card-body">
+          <p class="task-badge text-primary mb-1">Task 2</p>
+          <h2 class="card-title h5">Three Colored Boxes</h2>
+          <p class="text-muted small">RGB, HEX, and a named CSS color side by side.</p>
+          <a href="2-three-boxes.html" class="btn btn-dark btn-sm">Open page →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card task-card h-100 p-3">
+        <div class="card-body">
+          <p class="task-badge text-primary mb-1">Task 3</p>
+          <h2 class="card-title h5">Food Delivery Banner</h2>
+          <p class="text-muted small">Two-color linear-gradient with white text for contrast.</p>
+          <a href="3-food-banner.html" class="btn btn-dark btn-sm">Open page →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card task-card h-100 p-3">
+        <div class="card-body">
+          <p class="task-badge text-primary mb-1">Task 4</p>
+          <h2 class="card-title h5">Google Fonts Pairing</h2>
+          <p class="text-muted small">One font for all headings, another for all paragraphs.</p>
+          <a href="4-google-fonts-headings.html" class="btn btn-dark btn-sm">Open page →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card task-card h-100 p-3">
+        <div class="card-body">
+          <p class="task-badge text-primary mb-1">Task 5</p>
+          <h2 class="card-title h5">Readability Before/After</h2>
+          <p class="text-muted small">Zomato-style description: weight, letter-spacing, line-height.</p>
+          <a href="5-text-readability.html" class="btn btn-dark btn-sm">Open page →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card task-card h-100 p-3">
+        <div class="card-body">
+          <p class="task-badge text-primary mb-1">Task 6</p>
+          <h2 class="card-title h5">Trending Font Headline</h2>
+          <p class="text-muted small">A youth-focused headline font, with reasoning.</p>
+          <a href="6-trending-font-banner.html" class="btn btn-dark btn-sm">Open page →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="demo-footer text-center py-3">
+  Built with HTML, CSS, Bootstrap 5 &amp; vanilla JS — each page includes an inline validation check.
+</footer>
+
+</body>
+</html>

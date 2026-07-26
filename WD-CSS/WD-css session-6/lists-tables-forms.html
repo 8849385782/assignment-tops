@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lists, Tables &amp; Forms Styling</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+
+  <div class="container py-5">
+
+    <!-- =========================================================
+         SECTION 1: Favorite food list with emoji bullets + hover
+         ========================================================= -->
+    <h1 class="mb-4">My Favorite Foods</h1>
+
+    <ul id="food-list" class="food-list">
+      <li>Butter Chicken</li>
+      <li>Margherita Pizza</li>
+      <li>Sushi Platter</li>
+      <li>Chocolate Brownie</li>
+      <li>Masala Dosa</li>
+    </ul>
+
+    <hr class="my-5">
+
+    <!-- =========================================================
+         SECTION 2: IPL matches table - zebra stripes, rounded
+         corners, row hover highlight
+         ========================================================= -->
+    <h1 class="mb-4">Recent IPL Matches</h1>
+
+    <div class="table-wrapper">
+      <table id="ipl-table" class="ipl-table">
+        <thead>
+          <tr>
+            <th>Team 1</th>
+            <th>Team 2</th>
+            <th>Score</th>
+            <th>Winner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mumbai Indians</td>
+            <td>Chennai Super Kings</td>
+            <td>178/6 vs 175/8</td>
+            <td>Mumbai Indians</td>
+          </tr>
+          <tr>
+            <td>Royal Challengers Bengaluru</td>
+            <td>Kolkata Knight Riders</td>
+            <td>201/4 vs 190/7</td>
+            <td>Royal Challengers Bengaluru</td>
+          </tr>
+          <tr>
+            <td>Sunrisers Hyderabad</td>
+            <td>Delhi Capitals</td>
+            <td>165/9 vs 166/5</td>
+            <td>Delhi Capitals</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- =========================================================
+         SECTION 3: Music app sign-up form with custom styled
+         inputs and a hover/scale effect on the submit button
+         ========================================================= -->
+    <h1 class="mb-4">Join TuneWave 🎵</h1>
+
+    <form id="signup-form" class="signup-form row g-3" novalidate>
+
+      <div class="col-md-6">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control custom-input" id="username" placeholder="e.g. beatdrop_99" required>
+        <div class="invalid-feedback">Please choose a username (at least 3 characters).</div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control custom-input" id="email" placeholder="you@example.com" required>
+        <div class="invalid-feedback">Please enter a valid email address.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control custom-input" id="password" placeholder="At least 6 characters" required minlength="6">
+        <div class="invalid-feedback">Password must be at least 6 characters.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="genre" class="form-label">Favorite Genre</label>
+        <select class="form-select custom-input" id="genre" required>
+          <option value="" selected disabled>Choose a genre...</option>
+          <option value="pop">Pop</option>
+          <option value="rock">Rock</option>
+          <option value="hiphop">Hip-Hop</option>
+          <option value="edm">EDM</option>
+          <option value="classical">Classical</option>
+        </select>
+        <div class="invalid-feedback">Please select your favorite genre.</div>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" id="signup-btn" class="btn signup-btn">Create Account</button>
+      </div>
+
+      <div class="col-12">
+        <div id="signup-success" class="alert alert-success d-none mt-2" role="alert">
+          Account created successfully! Welcome to TuneWave.
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+
+  <!-- Bootstrap JS bundle (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- External JS file -->
+  <script src="forms.js"></script>
+</body>
+</html>

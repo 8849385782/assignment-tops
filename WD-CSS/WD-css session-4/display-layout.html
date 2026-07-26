@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Properties &amp; Layout Demo</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       INSTAGRAM-STYLE TOP NAV
+       Each nav item uses display: inline-block so they sit
+       side by side but still accept custom width/height,
+       which plain "inline" elements would ignore.
+       ========================================================= -->
+  <nav class="insta-nav">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="insta-logo">Instaclone</span>
+      <ul class="insta-menu mb-0 p-0">
+        <li class="insta-menu-item">Home</li>
+        <li class="insta-menu-item">Search</li>
+        <li class="insta-menu-item">Explore</li>
+        <li class="insta-menu-item">Reels</li>
+        <li class="insta-menu-item">Profile</li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+
+    <!-- =========================================================
+         SECTION 1: display BLOCK / INLINE / INLINE-BLOCK demo
+         ========================================================= -->
+    <h1 class="mb-4">Display Property Demo</h1>
+
+    <h2>Home <small class="text-muted">(display: block)</small></h2>
+    <div id="home-section" class="demo-section display-block-demo">
+      This is the Home section. It is set to <code>display: block</code>,
+      so it takes up the FULL width available and always starts on a new line,
+      even though we gave it a custom width/height.
+    </div>
+
+    <h2 class="mt-4">Explore <small class="text-muted">(display: inline)</small></h2>
+    <span id="explore-section" class="demo-section display-inline-demo">
+      This is the Explore section (display: inline).
+    </span>
+    <span class="demo-section display-inline-demo">
+      Notice it sits right next to other inline content, on the same line,
+    </span>
+    <span class="demo-section display-inline-demo">
+      and width/height set in CSS are IGNORED for inline elements.
+    </span>
+
+    <h2 class="mt-4">Profile <small class="text-muted">(display: inline-block)</small></h2>
+    <div id="profile-section" class="demo-section display-inline-block-demo">
+      Profile section A (inline-block)
+    </div>
+    <div class="demo-section display-inline-block-demo">
+      Profile section B (inline-block)
+    </div>
+    <div class="demo-section display-inline-block-demo">
+      Sits side by side, AND respects width/height, unlike plain inline.
+    </div>
+
+    <h2 class="mt-4">Hidden element <small class="text-muted">(display: none)</small></h2>
+    <div id="hidden-section" class="demo-section display-none-demo">
+      You should never see this text — display: none removes it from
+      the page layout entirely (it takes up no space at all).
+    </div>
+    <p class="text-muted fst-italic">
+      (The "display: none" box above is intentionally invisible and takes no space —
+      that's the point of the demo.)
+    </p>
+
+    <hr class="my-5">
+
+    <!-- =========================================================
+         SECTION 2: Flipkart-style two-column FLOAT layout
+         ========================================================= -->
+    <h1 class="mb-4">Flipkart-Style Product Listing (Float Layout)</h1>
+
+    <!-- clearfix-container applies the ::after clearfix technique
+         so this parent wraps both floated children correctly -->
+    <div class="clearfix-container border p-3">
+
+      <!-- LEFT COLUMN: product list, float: left -->
+      <div class="product-list">
+        <h3>Products</h3>
+        <div class="product-card">
+          <h5>Wireless Mouse</h5>
+          <p>Ergonomic wireless mouse with 18-month battery life.</p>
+          <strong>₹599</strong>
+        </div>
+        <div class="product-card">
+          <h5>Mechanical Keyboard</h5>
+          <p>RGB backlit mechanical keyboard, blue switches.</p>
+          <strong>₹2,499</strong>
+        </div>
+        <div class="product-card">
+          <h5>USB-C Hub</h5>
+          <p>7-in-1 hub with HDMI, SD card reader, and PD charging.</p>
+          <strong>₹1,199</strong>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: sidebar cart, float: right -->
+      <div class="sidebar-cart">
+        <h3>Your Cart</h3>
+        <ul id="cart-items" class="list-unstyled">
+          <li>Wireless Mouse - ₹599</li>
+          <li>Mechanical Keyboard - ₹2,499</li>
+        </ul>
+        <p><strong>Total: ₹3,098</strong></p>
+
+        <!-- Bootstrap form with JS validation to add an item to the cart -->
+        <form id="cart-form" class="mt-3" novalidate>
+          <div class="mb-2">
+            <label for="qty" class="form-label">Quantity to add</label>
+            <input type="number" class="form-control" id="qty" min="1" placeholder="e.g. 1" required>
+            <div class="invalid-feedback">Enter a quantity of 1 or more.</div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-sm w-100">Add USB-C Hub to Cart</button>
+          <div id="cart-success" class="alert alert-success mt-2 d-none py-1 px-2" role="alert">
+            Item added to cart!
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <!-- End of clearfix-container: because of the clearfix (::after + clear: both),
+         this div correctly expands to contain both floated columns above,
+         instead of collapsing to zero height. -->
+
+    <hr class="my-5">
+
+    <!-- =========================================================
+         SECTION 3: Why floats are outdated / Flexbox comparison
+         ========================================================= -->
+    <h1 class="mb-3">Floats vs. Flexbox</h1>
+    <div class="alert alert-warning">
+      <p class="mb-2">
+        Floats were originally designed to wrap text around images, not to build
+        page layouts — using them for columns means fighting collapsing parents,
+        needing manual clearfix hacks, and getting no real control over vertical
+        alignment or equal-height columns.
+      </p>
+      <p class="mb-2">
+        They also make responsive reordering and gap spacing awkward, since
+        floated elements only understand "left" and "right", not a true row/column
+        model.
+      </p>
+      <p class="mb-0">
+        Flexbox would simplify the two-column layout above to just one rule on the
+        parent: <code>display: flex; justify-content: space-between; gap: 20px;</code>
+        — no floats, no clearfix hack, and the columns can even be told to stretch
+        to equal height automatically with <code>align-items: stretch</code>.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS bundle (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- External JS file -->
+  <script src="layout.js"></script>
+</body>
+</html>

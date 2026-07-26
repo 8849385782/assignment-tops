@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Task 3 — Food Delivery Banner</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+  /* ---- Lesson CSS for Task 3 ---- */
+  body { font-family: 'Nunito', sans-serif; }
+
+  .food-banner {
+    /* linear-gradient with at least two colors */
+    background-image: linear-gradient(120deg, #FF512F 0%, #F09819 100%);
+    color: #ffffff; /* white text for contrast against the warm gradient */
+    border-radius: 16px;
+    padding: 3rem 2rem;
+  }
+
+  .food-banner h1 {
+    font-family: 'Baloo 2', cursive;
+    font-weight: 700;
+  }
+
+  .food-banner .btn-order {
+    background: #ffffff;
+    color: #F09819;
+    font-weight: 700;
+    border: none;
+  }
+  .food-banner .btn-order:hover { background: #fff4e8; }
+</style>
+</head>
+<body>
+
+<nav class="navbar demo-nav px-3">
+  <a href="index.html" class="brand text-decoration-none text-dark">← Back to index</a>
+  <span class="text-muted small">Task 3: Food Delivery Banner</span>
+</nav>
+
+<main class="container my-5">
+
+  <!-- ============ THE ACTUAL DEMO ============ -->
+  <section class="food-banner d-flex flex-column flex-md-row align-items-center justify-content-between">
+    <div>
+      <p class="mb-1 fw-semibold" style="opacity:.85;">FeastFly 🍜</p>
+      <h1 class="display-6 mb-2">Hot food, cold delivery fees.</h1>
+      <p class="mb-3 mb-md-0" style="max-width:420px; opacity:.9;">
+        Order from 500+ local restaurants and get it delivered in under 30 minutes.
+      </p>
+    </div>
+    <a href="#" class="btn btn-order btn-lg px-4">Order now</a>
+  </section>
+  <!-- ============ END DEMO ============ -->
+
+  <div class="row g-4 mt-1">
+    <div class="col-md-6">
+      <div class="code-note">
+        <h2 class="h6">The CSS</h2>
+<pre class="mb-0 small"><code>.food-banner {
+  background-image: linear-gradient(120deg, #FF512F 0%, #F09819 100%);
+  color: #ffffff;
+}</code></pre>
+        <p class="small text-muted mb-0 mt-2">Two color stops (red-orange → amber) give the banner an "appetite" warmth, and white text keeps a 4.5:1+ contrast ratio against both ends of the gradient.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2 class="h6">Live validation</h2>
+      <div class="border rounded p-2">
+        <pre id="validation-output" class="validation-box mb-2">Running checks…</pre>
+        <button id="run-validation-btn" class="btn btn-sm btn-outline-dark">Re-run validation</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="demo-footer text-center py-3">Task 3 of 6 — Food Delivery Banner</footer>
+
+<script src="validate.js"></script>
+<script>
+  function pageChecks() {
+    const banner = document.querySelector('.food-banner');
+    const bannerStyle = getComputedStyle(banner);
+
+    return [
+      {
+        label: "Banner uses background-image: linear-gradient(...)",
+        test: () => bannerStyle.backgroundImage.includes('linear-gradient')
+      },
+      {
+        label: "Gradient includes at least two color stops",
+        test: () => (bannerStyle.backgroundImage.match(/rgb/g) || []).length >= 2
+      },
+      {
+        label: "Banner text color is white for contrast",
+        test: () => bannerStyle.color === 'rgb(255, 255, 255)'
+      },
+      {
+        label: "Order button is visible inside the banner",
+        test: () => !!document.querySelector('.food-banner .btn-order')
+      }
+    ];
+  }
+</script>
+
+</body>
+</html>

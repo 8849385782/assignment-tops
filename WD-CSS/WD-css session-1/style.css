@@ -1,0 +1,72 @@
+/* =========================================================
+   style.css
+   External CSS file - linked from index.html via <link>
+   Demonstrates: element/id/class selectors, grouping selectors,
+   and basic property styling.
+   ========================================================= */
+
+/* Basic body styling */
+body {
+  background-color: #fffaf3;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* -------------------------------------------------------
+   GROUPING SELECTOR
+   The heading (#restaurant-name) and every menu item
+   (.menu-item) share ONE border rule, written only once,
+   instead of repeating "border: ..." in two separate places.
+   ------------------------------------------------------- */
+#restaurant-name,
+.menu-item {
+  border: 2px solid #8b3a3a;
+}
+
+/* -------------------------------------------------------
+   ID SELECTOR: unique background color for the heading
+   ------------------------------------------------------- */
+#restaurant-name {
+  background-color: #ffcc80;   /* unique heading background */
+  color: #4a1c1c;
+  font-size: 2.5rem;
+  padding: 15px;
+}
+
+/* -------------------------------------------------------
+   Paragraph font size (unique from the heading)
+   Note: color for #description is intentionally NOT set here,
+   because color is being tested via internal + inline CSS
+   inside index.html to demonstrate cascading priority.
+   ------------------------------------------------------- */
+.fs-restaurant-desc {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* -------------------------------------------------------
+   CLASS SELECTOR: applies to ALL menu items
+   ------------------------------------------------------- */
+.menu-item {
+  font-style: italic;
+  color: green;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+}
+
+/* -------------------------------------------------------
+   ID SELECTOR: highlights ONE special menu item
+   An id selector has higher specificity than the .menu-item
+   class, so this background/color wins for that one <li>.
+   ------------------------------------------------------- */
+#special-item {
+  background-color: #fff3b0;
+  color: #7a4b00;
+  font-weight: bold;
+  border-color: #d4a017;
+}
+
+/* Small polish for the suggestion form */
+#menu-form label {
+  font-weight: 600;
+}

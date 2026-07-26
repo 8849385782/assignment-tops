@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPL Player Card — Combined Properties Demo</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body {
+    background: #0b1120;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .player-card {
+    position: relative;
+    width: 300px;
+    height: 420px;
+    /* 1) border-radius: rounds the whole card */
+    border-radius: 20px;
+    overflow: hidden;
+    /* 2) background-image: stadium photo behind the player */
+    background-image:
+      linear-gradient(180deg, rgba(10,20,45,0.15) 0%, rgba(6,12,30,0.9) 75%),
+      url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=700&h=1000&fit=crop');
+    background-size: cover;
+    background-position: center;
+    /* 3) box-shadow: elevates card off the dark page background,
+          plus a subtle glow in the team color */
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65),
+                0 0 0 1px rgba(255, 193, 7, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .player-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.75),
+                0 0 24px rgba(255, 193, 7, 0.35);
+  }
+
+  .team-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #ffc107;
+    color: #0b1120;
+    font-weight: 800;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+
+  .jersey-number {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.15);
+  }
+
+  .player-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+  }
+
+  /* 4) text-shadow: makes the player's name pop against the photo */
+  .player-name {
+    color: #ffffff;
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 4px;
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.9),
+                 0 2px 6px rgba(0, 0, 0, 0.9);
+  }
+
+  .player-role {
+    color: #ffc107;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 18px;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat .value {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .stat .label {
+    color: #b8bfd1;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="player-card" id="playerCard">
+  <span class="team-tag">MUMBAI SMASHERS</span>
+  <span class="jersey-number">45</span>
+  <div class="player-info">
+    <div class="player-name">Arjun Vikrant</div>
+    <div class="player-role">All-Rounder · Right Hand Bat</div>
+    <div class="stats-row">
+      <div class="stat">
+        <div class="value" id="runsVal">3,412</div>
+        <div class="label">Runs</div>
+      </div>
+      <div class="stat">
+        <div class="value">128</div>
+        <div class="label">Wickets</div>
+      </div>
+      <div class="stat">
+        <div class="value">156.4</div>
+        <div class="label">Strike Rate</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Small JS interaction: tapping the card flashes the season total
+  const playerCard = document.getElementById('playerCard');
+  const runsVal = document.getElementById('runsVal');
+  const original = runsVal.textContent;
+
+  playerCard.addEventListener('click', function () {
+    runsVal.textContent = '+87 this match';
+    setTimeout(function () {
+      runsVal.textContent = original;
+    }, 1500);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+/* ============================================
+   Shared chrome styles (nav, footer, page frame)
+   Each demo page has its OWN <style> block for the
+   actual lesson CSS so every concept stays self-contained.
+   ============================================ */
+
+:root {
+  --ink: #1c1b1f;
+  --paper: #faf9f7;
+  --line: #e4e1da;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.demo-nav {
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.demo-nav .brand {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.demo-footer {
+  border-top: 1px solid var(--line);
+  color: #6b6b6b;
+  font-size: 0.85rem;
+}
+
+.validation-box {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  background: #0f172a;
+  color: #7ee787;
+  border-radius: 8px;
+  padding: 1rem;
+  white-space: pre-wrap;
+}
+
+.code-note {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+.task-badge {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 700;
+}

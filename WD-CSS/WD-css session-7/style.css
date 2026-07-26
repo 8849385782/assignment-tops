@@ -1,0 +1,2 @@
+/* Internal CSS overrides external due to cascade order. Profile class color overrides inherited body color. */
+body{color:#333;background:#f8f9fa;font-family:Arial;} .profile-card{background:#d1ecf1;color:purple;} .playlist-list{background:#fff3cd;color:blue;} .playlist-list .playlist-item{color:blue;} .hashtags{background:#f8d7da;}

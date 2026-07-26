@@ -1,0 +1,14 @@
+body{font-family:Arial,sans-serif}
+.book-btn{background:#d81b60;color:#fff;padding:12px 24px;border:none;border-radius:6px}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.book-btn:hover{animation:bounce .6s}
+.card{transition:.3s}
+nav{display:flex;gap:10px}
+@media(max-width:1023px){nav{display:block}}
+@media(max-width:767px){nav ul{display:none}.hamburger{display:block}}
+@media(min-width:768px){.hamburger{display:none}}
+.grid{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:768px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1200px){.grid{grid-template-columns:repeat(4,1fr)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

@@ -1,0 +1,129 @@
+/* =========================================================
+   forms.css
+   Covers: styled lists (emoji bullets + hover), styled table
+   (zebra striping, rounded corners, row hover), and styled
+   form inputs/buttons (border-radius, focus outline, shadow,
+   hover + transition scale effect).
+   ========================================================= */
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f7f7fb;
+}
+
+/* -------------------------------------------------------
+   SECTION 1: Favorite food list
+   ------------------------------------------------------- */
+.food-list {
+  list-style: none;   /* remove default bullets so we can add emoji instead */
+  padding-left: 0;
+}
+
+.food-list li {
+  position: relative;
+  padding: 10px 10px 10px 34px;   /* custom spacing, room for emoji */
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Emoji "bullet" using ::before instead of list-style-type */
+.food-list li::before {
+  content: "🍽️";
+  position: absolute;
+  left: 4px;
+}
+
+/* Hover effect: change list item color */
+.food-list li:hover {
+  color: #d6336c;
+  background-color: #fff0f6;
+}
+
+/* -------------------------------------------------------
+   SECTION 2: IPL matches table
+   ------------------------------------------------------- */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.ipl-table {
+  width: 100%;
+  border-collapse: separate;   /* required so border-radius shows on the table */
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.ipl-table thead {
+  background-color: #1b3a6b;
+  color: #fff;
+}
+
+.ipl-table th,
+.ipl-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+/* Zebra striping */
+.ipl-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.ipl-table tbody tr:nth-child(even) {
+  background-color: #f0f3fa;
+}
+
+/* Row hover highlight */
+.ipl-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.ipl-table tbody tr:hover {
+  background-color: #ffe9b3;
+}
+
+/* -------------------------------------------------------
+   SECTION 3: Music app sign-up form
+   ------------------------------------------------------- */
+.signup-form {
+  max-width: 600px;
+}
+
+/* Matching border-radius + box-shadow on all inputs/selects */
+.custom-input {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Custom focus outline color (overrides Bootstrap's default blue) */
+.custom-input:focus {
+  outline: none;
+  border-color: #7048e8;
+  box-shadow: 0 0 0 3px rgba(112, 72, 232, 0.25);
+}
+
+/* Submit button base styling */
+.signup-btn {
+  background-color: #7048e8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 28px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(112, 72, 232, 0.35);
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect: darker background + slight scale-up, animated via transition above */
+.signup-btn:hover {
+  background-color: #5230c9;
+  transform: scale(1.06);
+  box-shadow: 0 4px 10px rgba(112, 72, 232, 0.45);
+  color: #fff;
+}

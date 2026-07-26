@@ -1,0 +1,1 @@
+function toggleMenu(){const u=document.getElementById('menu');u.style.display=u.style.display==='block'?'none':'block';}

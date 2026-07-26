@@ -1,0 +1,1 @@
+gsap.from(".product-card",{duration:1,y:80,opacity:0});

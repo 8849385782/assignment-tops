@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Task 6 — Trending Font Headline</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Trending Google Font: Unbounded (bold, geometric, popular in 2025-26 for youth/gen-z brands) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+  body { font-family: 'Inter', sans-serif; }
+
+  .banner-v2 {
+    background-image: linear-gradient(120deg, #FF512F 0%, #F09819 100%);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 3.5rem 2rem;
+    text-align: center;
+  }
+
+  .banner-v2 h1 {
+    font-family: 'Unbounded', cursive; /* trending headline font */
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+  }
+
+  .banner-v2 .btn-order {
+    background: #ffffff;
+    color: #F09819;
+    font-weight: 700;
+    border: none;
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar demo-nav px-3">
+  <a href="index.html" class="brand text-decoration-none text-dark">← Back to index</a>
+  <span class="text-muted small">Task 6: Trending Font Headline</span>
+</nav>
+
+<main class="container my-5">
+
+  <!-- ============ THE ACTUAL DEMO ============ -->
+  <section class="banner-v2">
+    <p class="mb-2" style="opacity:.85; font-weight:600;">FeastFly 🍜</p>
+    <h1 class="display-5 mb-3">Craving? Delivered.</h1>
+    <p class="mb-4 mx-auto" style="max-width:420px; opacity:.9;">
+      Same banner, new headline font — swapped in "Unbounded" to feel louder and more Gen-Z.
+    </p>
+    <a href="#" class="btn btn-order btn-lg px-4">Order now</a>
+  </section>
+  <!-- ============ END DEMO ============ -->
+
+  <div class="row g-4 mt-1">
+    <div class="col-md-6">
+      <div class="code-note">
+        <h2 class="h6">Why "Unbounded"?</h2>
+        <p class="small mb-0">
+          Unbounded is a chunky, geometric display font that's been trending on Google Fonts
+          for youth-oriented apps and streetwear-adjacent brands. Its extra-bold weight
+          reads confidently at large sizes on a phone screen, it doesn't try to look
+          "elegant" or corporate, and its slightly playful letterforms match a food-delivery
+          app aimed at students and young professionals ordering late-night snacks — the
+          same vibe you'd see on a Gen-Z streetwear or sneaker drop page.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2 class="h6">Live validation</h2>
+      <div class="border rounded p-2">
+        <pre id="validation-output" class="validation-box mb-2">Running checks…</pre>
+        <button id="run-validation-btn" class="btn btn-sm btn-outline-dark">Re-run validation</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="demo-footer text-center py-3">Task 6 of 6 — Trending Font Headline</footer>
+
+<script src="validate.js"></script>
+<script>
+  function pageChecks() {
+    const h1 = document.querySelector('.banner-v2 h1');
+    const banner = document.querySelector('.banner-v2');
+    const h1Style = getComputedStyle(h1);
+    const bannerStyle = getComputedStyle(banner);
+
+    return [
+      {
+        label: "Headline font-family is Unbounded",
+        test: () => h1Style.fontFamily.toLowerCase().includes('unbounded')
+      },
+      {
+        label: "Headline font-weight is extra bold (>=700)",
+        test: () => parseInt(h1Style.fontWeight) >= 700
+      },
+      {
+        label: "Banner still uses a linear-gradient background",
+        test: () => bannerStyle.backgroundImage.includes('linear-gradient')
+      },
+      {
+        label: "Banner text remains white for contrast",
+        test: () => bannerStyle.color === 'rgb(255, 255, 255)'
+      }
+    ];
+  }
+</script>
+
+</body>
+</html>

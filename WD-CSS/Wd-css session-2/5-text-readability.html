@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Task 5 — Readability: Before &amp; After</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+  /* ---- Lesson CSS for Task 5 ---- */
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2 { font-family: 'Poppins', sans-serif; }
+
+  .desc-card {
+    background: #fff;
+    border: 1px solid #e4e1da;
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 100%;
+  }
+
+  /* BEFORE: cramped, hard to scan */
+  .desc-before p {
+    font-weight: 400;
+    letter-spacing: -0.01em; /* letters crowd together */
+    line-height: 1.1;        /* lines sit almost on top of each other */
+    font-size: 0.95rem;
+  }
+
+  /* AFTER: same content, tuned for readability */
+  .desc-after p {
+    font-weight: 500;        /* slightly heavier = easier to scan */
+    letter-spacing: 0.01em;  /* a touch of breathing room between letters */
+    line-height: 1.75;       /* generous space between lines */
+    font-size: 0.95rem;
+  }
+
+  .tag-label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar demo-nav px-3">
+  <a href="index.html" class="brand text-decoration-none text-dark">← Back to index</a>
+  <span class="text-muted small">Task 5: Readability Before/After</span>
+</nav>
+
+<main class="container my-5">
+  <h1 class="h3 mb-1">Styling a restaurant description for readability</h1>
+  <p class="text-muted mb-4">Same copy, two different <code>font-weight</code> / <code>letter-spacing</code> / <code>line-height</code> settings.</p>
+
+  <!-- ============ THE ACTUAL DEMO ============ -->
+  <div class="row g-4">
+    <div class="col-md-6">
+      <span class="tag-label text-danger">Before</span>
+      <div class="desc-card desc-before mt-2">
+        <h2 class="h6">Spice Route Kitchen</h2>
+        <p>
+          Spice Route Kitchen serves modern Indian street food in a casual
+          setting, with a wood fired tandoor, a rotating chutney bar, and
+          weekend thali specials that change every Saturday and Sunday
+          based on what is fresh at the local market that morning.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <span class="tag-label text-success">After</span>
+      <div class="desc-card desc-after mt-2">
+        <h2 class="h6">Spice Route Kitchen</h2>
+        <p>
+          Spice Route Kitchen serves modern Indian street food in a casual
+          setting, with a wood fired tandoor, a rotating chutney bar, and
+          weekend thali specials that change every Saturday and Sunday
+          based on what is fresh at the local market that morning.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- ============ END DEMO ============ -->
+
+  <div class="row g-4 mt-1">
+    <div class="col-md-6">
+      <div class="code-note">
+        <h2 class="h6">What changed, and why</h2>
+        <table class="table table-sm small mb-0">
+          <thead><tr><th></th><th>Before</th><th>After</th></tr></thead>
+          <tbody>
+            <tr><td>font-weight</td><td>400</td><td>500</td></tr>
+            <tr><td>letter-spacing</td><td>-0.01em (cramped)</td><td>0.01em (open)</td></tr>
+            <tr><td>line-height</td><td>1.1 (dense)</td><td>1.75 (airy)</td></tr>
+          </tbody>
+        </table>
+        <p class="small text-muted mt-2 mb-0">Tighter line-height and negative letter-spacing make long paragraphs feel like a wall of text; opening both up gives the eye clear "landing points" per line.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2 class="h6">Live validation</h2>
+      <div class="border rounded p-2">
+        <pre id="validation-output" class="validation-box mb-2">Running checks…</pre>
+        <button id="run-validation-btn" class="btn btn-sm btn-outline-dark">Re-run validation</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="demo-footer text-center py-3">Task 5 of 6 — Readability Before/After</footer>
+
+<script src="validate.js"></script>
+<script>
+  function pageChecks() {
+    const before = document.querySelector('.desc-before p');
+    const after = document.querySelector('.desc-after p');
+    const beforeStyle = getComputedStyle(before);
+    const afterStyle = getComputedStyle(after);
+
+    return [
+      {
+        label: "'After' line-height is greater than 'Before'",
+        test: () => parseFloat(afterStyle.lineHeight) > parseFloat(beforeStyle.lineHeight)
+      },
+      {
+        label: "'After' font-weight is heavier than 'Before'",
+        test: () => parseInt(afterStyle.fontWeight) > parseInt(beforeStyle.fontWeight)
+      },
+      {
+        label: "'After' letter-spacing is more open than 'Before'",
+        test: () => parseFloat(afterStyle.letterSpacing) > parseFloat(beforeStyle.letterSpacing)
+      },
+      {
+        label: "Both blocks contain the same text content",
+        test: () => before.textContent.trim() === after.textContent.trim()
+      }
+    ];
+  }
+</script>
+
+</body>
+</html>
