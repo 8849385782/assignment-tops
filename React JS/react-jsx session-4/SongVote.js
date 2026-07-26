@@ -1,0 +1,1 @@
+import {useState} from 'react';import './SongVote.css';export default function SongVote(){const[v,setV]=useState(0);return <div className='card p-4 text-center'><h3>🎵 Perfect - Ed Sheeran</h3><h1>{v}</h1><button className='btn btn-success me-2' onClick={()=>setV(v+1)}>⬆ Upvote</button><button className='btn btn-warning' onClick={()=>setV(v>0?v-1:0)}>⬇ Downvote</button></div>}

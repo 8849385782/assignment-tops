@@ -1,0 +1,1 @@
+import {useState} from 'react';import './CartItem.css';export default function CartItem(){const[q,setQ]=useState(0);return <div className='card p-4 text-center'><h3>Wireless Earbuds</h3><h5>Quantity: {q}</h5><button className='btn btn-danger me-2' onClick={()=>setQ(q>0?q-1:0)}>-</button><button className='btn btn-success' onClick={()=>setQ(q+1)}>+</button></div>}

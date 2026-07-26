@@ -1,0 +1,1 @@
+import React,{Component} from 'react';export default class UserGreetingClass extends Component{render(){return <div className='alert alert-primary text-center'><h4>Hello, {this.props.username}!</h4></div>;}}

@@ -1,0 +1,1 @@
+export default function UserGreeting(props){return <div className='alert alert-success text-center'><h4>Hello, {props.username}!</h4></div>}

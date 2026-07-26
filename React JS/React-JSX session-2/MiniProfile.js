@@ -1,0 +1,1 @@
+import profile from '../data/profile.json';export default function MiniProfile(){return(<div className='text-center'><img src={profile.image} alt={profile.name} className='profile-img mb-3'/><h3>{profile.name}</h3><p className='status'>{profile.status}</p><button className='btn btn-primary'>Follow</button></div>);}
