@@ -1,0 +1,1 @@
+$(document).ready(function(){$('#showBtn').click(function(){$('#message').show();});$('#hideCaption').click(function(){$('#caption').hide();});$('#showCaption').click(function(){$('#caption').show();});$('.menu-item').css({'background':'#f5f5f5','padding':'15px'});});

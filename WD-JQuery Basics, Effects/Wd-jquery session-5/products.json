@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Apple iPhone 15",
+    "price": 79999
+  },
+  {
+    "name": "Samsung Galaxy S24",
+    "price": 74999
+  },
+  {
+    "name": "OnePlus 12",
+    "price": 64999
+  },
+  {
+    "name": "Realme GT 6",
+    "price": 42999
+  },
+  {
+    "name": "Redmi Note 13 Pro",
+    "price": 25999
+  },
+  {
+    "name": "Boat Rockerz 450 Headphones",
+    "price": 1999
+  },
+  {
+    "name": "HP Pavilion Laptop",
+    "price": 68999
+  },
+  {
+    "name": "Dell Inspiron Laptop",
+    "price": 62999
+  },
+  {
+    "name": "Sony Wireless Earbuds",
+    "price": 4999
+  },
+  {
+    "name": "Apple Watch Series 9",
+    "price": 39999
+  }
+]
