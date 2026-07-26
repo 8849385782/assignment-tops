@@ -1,0 +1,64 @@
+:root {
+  --accent: #1f6f54;
+  --accent-dark: #144d3a;
+  --paper: #faf8f3;
+  --ink: #232323;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  padding-bottom: 3rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.page-title {
+  border-left: 6px solid var(--accent);
+  padding-left: .75rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+table.styled-table {
+  background: #fff;
+}
+
+table.styled-table thead th {
+  background: var(--accent);
+  color: #fff;
+  vertical-align: middle;
+}
+
+table.styled-table td, table.styled-table th {
+  vertical-align: middle;
+}
+
+.hub-card {
+  transition: transform .15s ease, box-shadow .15s ease;
+  height: 100%;
+}
+
+.hub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+footer {
+  color: #777;
+  font-size: .9rem;
+  margin-top: 3rem;
+}
+
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+  border-color: #dc3545;
+}
+
+.was-validated .form-control:valid,
+.was-validated .form-select:valid {
+  border-color: var(--accent);
+}

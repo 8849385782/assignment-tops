@@ -1,0 +1,113 @@
+/* ============================================
+   Shared Stylesheet — Personal Portfolio Site
+   Palette: Ink Navy #22314A, Warm Sand #F6F3EC,
+            Amber #E0A458, Deep Teal #1F6F6B
+   Fonts: Poppins (display), Inter (body)
+   ============================================ */
+
+:root {
+  --ink-navy: #22314A;
+  --warm-sand: #F6F3EC;
+  --amber: #E0A458;
+  --deep-teal: #1F6F6B;
+  --white: #FFFFFF;
+  --muted: #6B7280;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--warm-sand);
+  color: var(--ink-navy);
+}
+
+h1, h2, h3, h4, .brand-font {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+a { text-decoration: none; }
+
+/* ---------- Header / Navbar ---------- */
+.site-header {
+  background-color: var(--ink-navy);
+}
+
+.site-header .navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--amber) !important;
+  letter-spacing: 0.5px;
+}
+
+.site-header .nav-link {
+  color: var(--white) !important;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link.active {
+  color: var(--amber) !important;
+}
+
+/* ---------- Hero band (used on some pages) ---------- */
+.hero-band {
+  background: linear-gradient(135deg, var(--ink-navy) 0%, var(--deep-teal) 100%);
+  color: var(--white);
+  padding: 3rem 0;
+}
+
+/* ---------- Cards ---------- */
+.content-card {
+  background-color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(34, 49, 74, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(34, 49, 74, 0.14);
+}
+
+.badge-amber {
+  background-color: var(--amber);
+  color: var(--ink-navy);
+  font-weight: 600;
+}
+
+/* ---------- Anchor jump-links (movies page) ---------- */
+.jump-list a {
+  color: var(--deep-teal);
+  font-weight: 600;
+  border-bottom: 1px dashed var(--deep-teal);
+}
+
+.jump-list a:hover {
+  color: var(--amber);
+  border-bottom-color: var(--amber);
+}
+
+section[id] {
+  scroll-margin-top: 90px; /* offsets fixed navbar when jumping to an anchor */
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: var(--ink-navy);
+  color: var(--white);
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+.site-footer a {
+  color: var(--amber);
+}
+
+/* ---------- Utility ---------- */
+.accent-underline {
+  display: inline-block;
+  border-bottom: 3px solid var(--amber);
+  padding-bottom: 4px;
+}

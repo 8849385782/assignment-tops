@@ -1,0 +1,52 @@
+:root {
+  --accent: #cb202d;   /* Zomato-ish red, used tastefully */
+  --accent-dark: #99161f;
+  --paper: #faf8f3;
+  --ink: #232323;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  padding-bottom: 3rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.section-block {
+  background: #fff;
+  border-radius: .5rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+hr.section-divider {
+  border: none;
+  border-top: 2px dashed var(--accent);
+  margin: 1.5rem 0;
+}
+
+.hub-card {
+  transition: transform .15s ease, box-shadow .15s ease;
+  height: 100%;
+}
+.hub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+code.tag {
+  background: #f1f1f1;
+  padding: 0 .3rem;
+  border-radius: 3px;
+}
+
+footer {
+  color: #777;
+  font-size: .9rem;
+  margin-top: 3rem;
+}

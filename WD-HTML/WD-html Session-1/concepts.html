@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Concepts</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#99161f;">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">📄 Intro to HTML</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="concepts.html">Concepts</a></li>
+        <li class="nav-item"><a class="nav-link" href="homepage.html">Homepage Demo</a></li>
+        <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback Form</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h1 class="mt-4">What is HTML?</h1>
+
+  <div class="section-block">
+    <p><strong>HTML</strong> (HyperText Markup Language) is the standard markup language used to create the structure of web pages. It is not a programming language — it doesn't compute logic — it describes <em>content</em> and how that content is organized, using a system of <strong>elements</strong> made of <strong>tags</strong>.</p>
+  </div>
+
+  <h2>Basic Syntax</h2>
+  <div class="section-block">
+    <p>Most HTML elements have an opening tag, some content, and a closing tag:</p>
+    <pre class="bg-light p-3 rounded"><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+    <p>Some elements are "self-closing" or "void" — they don't wrap content, e.g. <code class="tag">&lt;hr&gt;</code> and <code class="tag">&lt;br&gt;</code>.</p>
+    <p>Attributes give extra information inside the opening tag: <code class="tag">&lt;img src="cat.jpg" alt="A cat"&gt;</code>.</p>
+  </div>
+
+  <h2>Document Structure</h2>
+  <div class="section-block">
+    <p>Every HTML5 page follows the same skeleton:</p>
+    <pre class="bg-light p-3 rounded"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Visible page content goes here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <ul>
+      <li><code class="tag">&lt;!DOCTYPE html&gt;</code> — tells the browser this is an HTML5 document.</li>
+      <li><code class="tag">&lt;html&gt;</code> — the root element wrapping everything.</li>
+      <li><code class="tag">&lt;head&gt;</code> — metadata: title, character set, linked CSS, etc. Nothing here is visible on the page.</li>
+      <li><code class="tag">&lt;body&gt;</code> — everything the visitor actually sees.</li>
+    </ul>
+  </div>
+
+  <h2>Basic Tags Covered</h2>
+  <div class="section-block">
+    <ul>
+      <li><code class="tag">&lt;h1&gt;</code> through <code class="tag">&lt;h6&gt;</code> — headings, in decreasing importance/size.</li>
+      <li><code class="tag">&lt;p&gt;</code> — a paragraph of text.</li>
+      <li><code class="tag">&lt;hr&gt;</code> — a horizontal rule, used to visually separate sections.</li>
+      <li><code class="tag">&lt;!-- comment --&gt;</code> — a comment; ignored by the browser, visible only in the source code.</li>
+    </ul>
+  </div>
+
+  <p><a href="homepage.html" class="btn btn-danger">See these tags used in a real page →</a></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

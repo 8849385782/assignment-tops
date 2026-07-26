@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies | My Personal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Header / Navbar ===== -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg container py-3">
+      <a class="navbar-brand" href="index.html">My Portfolio</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero-band text-center">
+    <div class="container">
+      <h1 class="display-6">My Top 5 Movies</h1>
+      <p class="lead mb-0">Click a title below to jump straight to its description</p>
+    </div>
+  </section>
+
+  <!-- ===== Main Content ===== -->
+  <main class="container py-5">
+
+    <!-- Jump-to list: uses #id anchor links to scroll to sections below -->
+    <div class="content-card card p-4 mb-5">
+      <h2 class="h5 mb-3">Quick Jump</h2>
+      <ol class="jump-list mb-0">
+        <li><a href="#inception">Inception</a></li>
+        <li><a href="#interstellar">Interstellar</a></li>
+        <li><a href="#the-dark-knight">The Dark Knight</a></li>
+        <li><a href="#spirited-away">Spirited Away</a></li>
+        <li><a href="#parasite">Parasite</a></li>
+      </ol>
+    </div>
+
+    <section id="inception" class="content-card card p-4 mb-4">
+      <span class="badge badge-amber mb-2">No. 1</span>
+      <h2 class="h4">Inception (2010)</h2>
+      <p>A skilled thief who steals secrets through dream-sharing technology is given a chance to erase his criminal record by planting an idea instead of stealing one. Mind-bending, layered, and endlessly rewatchable.</p>
+    </section>
+
+    <section id="interstellar" class="content-card card p-4 mb-4">
+      <span class="badge badge-amber mb-2">No. 2</span>
+      <h2 class="h4">Interstellar (2014)</h2>
+      <p>A team of explorers travel through a wormhole in search of a new home for humanity as Earth becomes uninhabitable. A stunning mix of hard science, emotion, and a legendary score.</p>
+    </section>
+
+    <section id="the-dark-knight" class="content-card card p-4 mb-4">
+      <span class="badge badge-amber mb-2">No. 3</span>
+      <h2 class="h4">The Dark Knight (2008)</h2>
+      <p>Batman faces his greatest psychological and physical test in the Joker, a criminal mastermind who wants to prove that anyone can be pushed to their limits. A gritty, tense masterpiece.</p>
+    </section>
+
+    <section id="spirited-away" class="content-card card p-4 mb-4">
+      <span class="badge badge-amber mb-2">No. 4</span>
+      <h2 class="h4">Spirited Away (2001)</h2>
+      <p>A young girl wanders into a magical world ruled by spirits and must work to free herself and her parents. Studio Ghibli's imagination at its absolute peak.</p>
+    </section>
+
+    <section id="parasite" class="content-card card p-4 mb-4">
+      <span class="badge badge-amber mb-2">No. 5</span>
+      <h2 class="h4">Parasite (2019)</h2>
+      <p>A poor family cons their way into working for a wealthy household, only to find things are not what they seem. Sharp, unpredictable, and the first non-English film to win Best Picture.</p>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 My Personal Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

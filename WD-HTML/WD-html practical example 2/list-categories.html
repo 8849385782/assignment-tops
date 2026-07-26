@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Categorized List</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#144d3a;">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">📘 Table &amp; List Assignment</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">← Back to Hub</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h1 class="page-title">7. List with Different Categories</h1>
+  <p class="text-muted">Grocery shopping list, grouped by category.</p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card shadow-sm mb-3">
+        <div class="card-header bg-success text-white">Fruits</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Apples</li>
+          <li class="list-group-item">Bananas</li>
+          <li class="list-group-item">Mangoes</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm mb-3">
+        <div class="card-header bg-success text-white">Vegetables</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Spinach</li>
+          <li class="list-group-item">Carrots</li>
+          <li class="list-group-item">Potatoes</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm mb-3">
+        <div class="card-header bg-success text-white">Dairy</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Milk</li>
+          <li class="list-group-item">Cheese</li>
+          <li class="list-group-item">Yogurt</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h5 class="mt-3">Same data as a nested HTML list:</h5>
+  <ul>
+    <li><strong>Fruits</strong>
+      <ol>
+        <li>Apples</li>
+        <li>Bananas</li>
+        <li>Mangoes</li>
+      </ol>
+    </li>
+    <li><strong>Vegetables</strong>
+      <ol>
+        <li>Spinach</li>
+        <li>Carrots</li>
+        <li>Potatoes</li>
+      </ol>
+    </li>
+    <li><strong>Dairy</strong>
+      <ol>
+        <li>Milk</li>
+        <li>Cheese</li>
+        <li>Yogurt</li>
+      </ol>
+    </li>
+  </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

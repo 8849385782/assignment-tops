@@ -1,0 +1,74 @@
+/* ===== myprofile.html ===== */
+.profile-card {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.profile-card h1,
+.profile-card h2,
+.profile-card h3,
+.profile-card h4,
+.profile-card h5,
+.profile-card h6 {
+  margin: 8px 0;
+}
+
+/* ===== flipkart-link.html ===== */
+.link-card {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* ===== formatting-demo.html ===== */
+.demo-card {
+  max-width: 650px;
+  margin: auto;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  line-height: 1.8;
+}
+
+/* ===== zomato-favorites.html ===== */
+.food-card {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.food-card li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* ===== form-validation.html ===== */
+.form-card {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+#successMsg {
+  display: none;
+}
+
+/* ===== Shared page backgrounds ===== */
+body.page-profile { background: #f5f7fa; padding-top: 40px; }
+body.page-flipkart { display: flex; align-items: center; justify-content: center; height: 100vh; background: #eef2f7; }
+body.page-formatting { background: #fffaf0; padding-top: 40px; }
+body.page-zomato { background: #fff5f0; padding-top: 40px; }
+body.page-form { background: #f0f4ff; padding-top: 40px; }

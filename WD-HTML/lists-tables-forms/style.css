@@ -1,0 +1,40 @@
+/* ==========================================================
+   Custom styles — layered on top of Bootstrap 5
+   ========================================================== */
+
+body {
+  padding-top: 56px; /* offset for fixed-top navbar */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.page-content {
+  min-height: 75vh;
+}
+
+/* Nested ordered lists inside the IPL teams list */
+.list-group-item ol {
+  padding-left: 1.5rem;
+}
+
+table caption {
+  caption-side: top;
+  font-style: italic;
+  color: #555;
+}
+
+/* ==========================================================
+   Responsive tweaks
+   ========================================================== */
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+}

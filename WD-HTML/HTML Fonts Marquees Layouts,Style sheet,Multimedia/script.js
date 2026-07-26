@@ -1,0 +1,1 @@
+function showWelcome(){alert('Welcome to Swiggy Deals!');}window.onload=function(){showWelcome();};function feedbackSubmitted(){alert('Thank you! Your feedback has been submitted.');}
