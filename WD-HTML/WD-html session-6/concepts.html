@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multimedia — Concepts</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#4b2e83;">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">🎬 Multimedia Integration</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto flex-wrap">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="concepts.html">Concepts</a></li>
+        <li class="nav-item"><a class="nav-link" href="company-intro.html">Company Intro</a></li>
+        <li class="nav-item"><a class="nav-link" href="favorite-song.html">Favorite Song</a></li>
+        <li class="nav-item"><a class="nav-link" href="ipl-video.html">IPL Video</a></li>
+        <li class="nav-item"><a class="nav-link" href="video-clip.html">Autoplay Clip</a></li>
+        <li class="nav-item"><a class="nav-link" href="chill-beats.html">Chill Beats</a></li>
+        <li class="nav-item"><a class="nav-link" href="restricted-controls.html">Restricted Controls</a></li>
+        <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback Form</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h1 class="mt-4">Embedding Video, Audio &amp; YouTube</h1>
+
+  <div class="section-block">
+    <h2 class="h4">&lt;video&gt;</h2>
+    <p>Embeds a self-hosted video file directly on the page.</p>
+    <pre class="bg-light p-3 rounded"><code>&lt;video src="clip.mp4" controls width="640"&gt;&lt;/video&gt;</code></pre>
+  </div>
+
+  <div class="section-block">
+    <h2 class="h4">&lt;audio&gt;</h2>
+    <p>Embeds a sound file with a built-in player.</p>
+    <pre class="bg-light p-3 rounded"><code>&lt;audio src="song.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+  </div>
+
+  <div class="section-block">
+    <h2 class="h4">YouTube &lt;iframe&gt;</h2>
+    <p>YouTube videos aren't embedded with <code class="tag">&lt;video&gt;</code> — instead you copy YouTube's own embed code, which is an <code class="tag">&lt;iframe&gt;</code> pointing at <code class="tag">youtube.com/embed/VIDEO_ID</code>. Get it from a video's <strong>Share → Embed</strong> button.</p>
+    <pre class="bg-light p-3 rounded"><code>&lt;iframe width="560" height="315"
+  src="https://www.youtube.com/embed/VIDEO_ID"
+  title="YouTube video player" frameborder="0"
+  allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+  </div>
+
+  <h2>Key Attributes</h2>
+  <div class="section-block">
+    <ul>
+      <li><code class="tag">controls</code> — shows the browser's built-in play/pause/volume/seek bar. Without it, the media has no visible UI at all.</li>
+      <li><code class="tag">autoplay</code> — starts playback as soon as the page loads. Most browsers block autoplay with sound unless the element is also <code class="tag">muted</code>, so autoplaying video almost always needs <code class="tag">muted</code> alongside it.</li>
+      <li><code class="tag">loop</code> — restarts playback automatically from the beginning once it ends.</li>
+      <li><code class="tag">controlsList</code> — (video only) hides specific parts of the default control bar, e.g. <code class="tag">controlsList="nodownload nofullscreen"</code> removes the download and fullscreen buttons while keeping play/pause/volume.</li>
+    </ul>
+  </div>
+
+  <p><a href="company-intro.html" class="btn" style="background-color:#4b2e83;color:#fff;">See these tags in action →</a></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

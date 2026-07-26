@@ -1,0 +1,62 @@
+/* ===========================================
+   style.css
+   Custom styles for Forms & Inputs Trainer
+=========================================== */
+
+body {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+/* Highlight required fields with a small red asterisk automatically */
+.required-mark {
+  color: #dc3545;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+/* Star rating radios laid out horizontally */
+.star-rating {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.star-rating label {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Feature checkbox list spacing */
+.feature-check {
+  margin-bottom: 0.5rem;
+}
+
+/* Success / validation alert box (shown by script.js) */
+.validation-alert {
+  display: none;
+  margin-top: 1rem;
+}
+
+/* Explanation page styling */
+.explain-box {
+  border-left: 4px solid #0d6efd;
+  background-color: #eef4ff;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+}
+
+.risk-box {
+  border-left: 4px solid #dc3545;
+  background-color: #fdeeee;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+}
+
+.btn-outline-secondary {
+  margin-bottom: 1rem;
+}

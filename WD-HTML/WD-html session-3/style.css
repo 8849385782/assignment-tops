@@ -1,0 +1,64 @@
+/* ===========================================
+   style.css
+   Custom styles for Lists & Tables Trainer
+   (Bootstrap handles layout/grid; this file
+   adds the custom touches + table look)
+=========================================== */
+
+body {
+  background-color: #f8f9fa;
+}
+
+/* Card hover polish */
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+/* Table styling helper classes
+   (used together with inline style="" borders
+   required by the assignment hint) */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table caption {
+  caption-side: top;
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+table th,
+table td {
+  padding: 8px;
+  text-align: left;
+}
+
+/* Header row color themes per page */
+.table-header-blue th {
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+.table-header-green th {
+  background-color: #198754;
+  color: #ffffff;
+}
+
+/* List group link hover effect */
+.list-group-item-action:hover {
+  background-color: #e9ecef;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Definition list term color */
+dl dt {
+  font-weight: 600;
+}
+
+/* Back-to-home button spacing */
+.btn-outline-secondary {
+  margin-bottom: 1rem;
+}

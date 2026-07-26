@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Front-end vs Server-side Validation</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+
+      <a href="index.html" class="btn btn-outline-secondary btn-sm">&larr; Back to Home</a>
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="mb-4 text-center">🔍 Front-end vs Server-side Validation</h2>
+
+          <div class="explain-box mb-4">
+            <p class="mb-2">
+              <strong>Front-end validation</strong> (using HTML attributes like <code>required</code> and
+              <code>pattern</code>) runs instantly in the user's browser, before anything is sent anywhere &mdash;
+              it's fast and gives immediate feedback, but it only checks what the browser is told to check.
+            </p>
+            <p class="mb-0">
+              <strong>Server-side validation</strong> happens after the form is submitted, on a server the user
+              doesn't control. It re-checks every value against the real rules (format, length, duplicates,
+              business logic) because the server can never fully trust data coming from a browser.
+            </p>
+          </div>
+
+          <div class="risk-box">
+            <p class="mb-0">
+              <strong>Risk example:</strong> if a login form only relies on front-end <code>required</code>/<code>pattern</code>
+              checks, someone could bypass the browser entirely &mdash; using a tool like curl or Postman to send a raw
+              POST request straight to the server &mdash; and submit empty fields or malicious input (like a SQL
+              injection string) that the HTML page would normally have blocked. Without server-side validation,
+              that bad data goes straight into the backend unchecked.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

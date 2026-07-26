@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){console.log("Accessibility & SEO HTML Page Loaded Successfully.");console.log("Page Title: "+document.title);alert("Page Loaded Successfully!");});

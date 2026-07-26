@@ -1,0 +1,59 @@
+:root {
+  --accent: #6f42c1;
+  --accent-dark: #4b2e83;
+  --paper: #f8f7fb;
+  --ink: #232323;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  padding-bottom: 3rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.section-block {
+  background: #fff;
+  border-radius: .5rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+.media-frame {
+  max-width: 640px;
+  width: 100%;
+  border-radius: .5rem;
+  box-shadow: 0 .25rem .75rem rgba(0,0,0,.15);
+}
+
+.player-card {
+  background: #efe9fb;
+  border-radius: .75rem;
+  padding: 1rem;
+}
+
+.hub-card {
+  transition: transform .15s ease, box-shadow .15s ease;
+  height: 100%;
+}
+.hub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+code.tag {
+  background: #eee7fa;
+  padding: 0 .3rem;
+  border-radius: 3px;
+}
+
+footer {
+  color: #777;
+  font-size: .9rem;
+  margin-top: 3rem;
+}

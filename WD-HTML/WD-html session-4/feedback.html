@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Booking Feedback</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-7">
+
+      <a href="index.html" class="btn btn-outline-secondary btn-sm">&larr; Back to Home</a>
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="mb-4 text-center">🎬 Movie Booking Feedback</h2>
+
+          <form id="feedbackForm" class="js-demo-form" action="#" method="post" novalidate>
+
+            <!-- Star rating: radio buttons -->
+            <div class="mb-4">
+              <label class="form-label d-block">Rate your booking experience<span class="required-mark">*</span></label>
+              <div class="star-rating">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rating" id="star1" value="1" required>
+                  <label class="form-check-label" for="star1">1 ⭐</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rating" id="star2" value="2" required>
+                  <label class="form-check-label" for="star2">2 ⭐</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rating" id="star3" value="3" required>
+                  <label class="form-check-label" for="star3">3 ⭐</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rating" id="star4" value="4" required>
+                  <label class="form-check-label" for="star4">4 ⭐</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rating" id="star5" value="5" required>
+                  <label class="form-check-label" for="star5">5 ⭐</label>
+                </div>
+              </div>
+              <div class="invalid-feedback d-block" style="display:none;">Please pick a star rating.</div>
+            </div>
+
+            <!-- Features used: checkboxes -->
+            <div class="mb-4">
+              <label class="form-label d-block">Which features did you use?</label>
+              <div class="form-check feature-check">
+                <input class="form-check-input" type="checkbox" id="seatSelection" name="features" value="seatSelection">
+                <label class="form-check-label" for="seatSelection">Seat Selection</label>
+              </div>
+              <div class="form-check feature-check">
+                <input class="form-check-input" type="checkbox" id="foodOrder" name="features" value="foodOrder">
+                <label class="form-check-label" for="foodOrder">Food Order</label>
+              </div>
+              <div class="form-check feature-check">
+                <input class="form-check-input" type="checkbox" id="payment" name="features" value="payment">
+                <label class="form-check-label" for="payment">Online Payment</label>
+              </div>
+            </div>
+
+            <!-- Select: how did you book -->
+            <div class="mb-4">
+              <label for="bookingMethod" class="form-label">How did you book your ticket?</label>
+              <select class="form-select" id="bookingMethod" name="bookingMethod">
+                <option value="app" selected>Mobile App</option>
+                <option value="website">Website</option>
+                <option value="counter">Box Office Counter</option>
+              </select>
+            </div>
+
+            <!-- Gmail-only email with pattern -->
+            <div class="mb-4">
+              <label for="feedbackEmail" class="form-label">Email (Gmail addresses only)<span class="required-mark">*</span></label>
+              <input type="email" class="form-control" id="feedbackEmail" name="feedbackEmail"
+                     placeholder="yourname@gmail.com" required
+                     pattern="[a-zA-Z0-9._%\+\-]+@gmail\.com">
+              <div class="invalid-feedback">Please enter a valid @gmail.com address.</div>
+            </div>
+
+            <button type="submit" class="btn btn-danger w-100">Submit Feedback</button>
+
+            <div class="validation-alert alert" role="alert"></div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

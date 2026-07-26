@@ -1,0 +1,108 @@
+/* ===========================================
+   style.css
+   Custom styles for Semantic HTML5 Tags Trainer
+=========================================== */
+
+body {
+  background-color: #f8f9fa;
+}
+
+/* ---- Generic semantic tag styling (Bootstrap utility classes
+   are applied directly on header/nav/section/article/aside/footer
+   in the markup - these rules just add extra polish) ---- */
+
+header.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dee2e6;
+}
+
+nav.site-nav {
+  background-color: #212529;
+}
+
+nav.site-nav a {
+  color: #f8f9fa;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+section:nth-of-type(even) {
+  background-color: #ffffff;
+}
+
+article {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+aside {
+  background-color: #eef4ff;
+  border: 1px solid #cfe0fc;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+footer.site-footer {
+  background-color: #212529;
+  color: #f8f9fa;
+  padding: 1.5rem 0;
+}
+
+footer.site-footer a {
+  color: #adb5bd;
+}
+
+/* ---- Before / After comparison blocks (news article demo) ---- */
+.before-block {
+  border-left: 4px solid #dc3545;
+  background-color: #fdeeee;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.after-block {
+  border-left: 4px solid #198754;
+  background-color: #eafaf1;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* ---- Explanation page boxes ---- */
+.explain-box {
+  border-left: 4px solid #0d6efd;
+  background-color: #eef4ff;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+}
+
+.benefit-box {
+  border-left: 4px solid #198754;
+  background-color: #eafaf1;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+}
+
+/* ---- Product card (Flipkart demo) ---- */
+article.product-card {
+  height: 100%;
+}
+
+.tag-label {
+  display: inline-block;
+  font-family: monospace;
+  background-color: #212529;
+  color: #f8f9fa;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-right: 4px;
+}
+
+.btn-outline-secondary {
+  margin-bottom: 1rem;
+}

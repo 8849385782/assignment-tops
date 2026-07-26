@@ -1,0 +1,54 @@
+/* ==========================================================
+   Custom styles — layered on top of Bootstrap 5
+   ========================================================== */
+
+body {
+  padding-top: 56px; /* offset for fixed-top navbar */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Hero section on the homepage */
+.hero {
+  min-height: 60vh;
+  background: linear-gradient(135deg, #1f2937, #374151);
+}
+
+.page-content {
+  min-height: 70vh;
+}
+
+/* Card image consistency */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ==========================================================
+   Mobile fix: on small screens the navbar brand + toggler
+   used to sit too close together and the hero text was cramped.
+   Fixed with extra spacing and a smaller heading scale below 576px.
+   ========================================================== */
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .lead {
+    font-size: 1rem;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+}
+
+/* Tablet tweak */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}

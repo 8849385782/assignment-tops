@@ -1,0 +1,6 @@
+function saveUser(){let username=prompt("Enter Spotify Username");if(username==""||username==null){alert("Please enter a valid username.");return;}localStorage.setItem("spotifyUser",username);alert("Stored Username : "+localStorage.getItem("spotifyUser"));}
+function saveFood(){let food=prompt("Enter your Favorite Food");if(food==""||food==null){alert("Please enter your favorite food.");return;}sessionStorage.setItem("favFood",food);let r=document.getElementById("result");if(r)r.innerHTML="Favorite Food Saved Successfully : "+food;}
+function showLocation(){if(navigator.geolocation){navigator.geolocation.getCurrentPosition(success,error);}else{document.getElementById("location").innerHTML="Geolocation not supported.";}}
+function success(position){document.getElementById("location").innerHTML="<b>Latitude :</b> "+position.coords.latitude+"<br><b>Longitude :</b> "+position.coords.longitude;}
+function error(){document.getElementById("location").innerHTML="Permission denied or unable to fetch location.";}
+window.onload=function(){let canvas=document.getElementById("ball");if(canvas){let ctx=canvas.getContext("2d");ctx.beginPath();ctx.arc(100,100,60,0,2*Math.PI);ctx.fillStyle="red";ctx.fill();ctx.closePath();ctx.beginPath();ctx.moveTo(70,55);ctx.lineTo(130,145);ctx.lineWidth=5;ctx.strokeStyle="white";ctx.stroke();ctx.closePath();}};
