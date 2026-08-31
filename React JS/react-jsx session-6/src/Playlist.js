@@ -1,0 +1,1 @@
+export default function Playlist({songs}){return <div className='card'><h4>Playlist</h4><ul className='list-group'>{songs.map((s,i)=><li key={i} className='list-group-item'><b>{s.title}</b> - {s.artist}</li>)}</ul></div>}

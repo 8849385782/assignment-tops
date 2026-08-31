@@ -1,0 +1,1 @@
+import {useEffect,useState} from 'react';export default function IPLScoreFetcher(){const[h,setH]=useState('Loading...');useEffect(()=>{fetch('https://jsonplaceholder.typicode.com/posts').then(r=>r.json()).then(d=>setH(d[0].title)).catch(()=>setH('Error'));},[]);return <div className='card p-3'><h4>IPL Headline</h4><p>{h}</p></div>}

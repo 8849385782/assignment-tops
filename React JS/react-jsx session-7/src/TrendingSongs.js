@@ -1,0 +1,1 @@
+import {useEffect} from 'react';export default function TrendingSongs(){useEffect(()=>{console.log('Component mounted')},[]);return <div className='card p-3'><h4>Trending Songs</h4><p>Open console: Component mounted</p></div>}

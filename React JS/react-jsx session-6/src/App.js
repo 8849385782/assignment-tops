@@ -1,0 +1,4 @@
+import Playlist from './components/Playlist';import OrderStatus from './components/OrderStatus';
+const songs=[{title:'Shape of You',artist:'Ed Sheeran'},{title:'Perfect',artist:'Ed Sheeran'},{title:'Believer',artist:'Imagine Dragons'}];
+const products=['Pizza','Burger','Pasta','Sandwich'];
+export default function App(){return <div className='container py-4'><h2>Lists & Conditional Rendering Assignment</h2><Playlist songs={songs}/><OrderStatus isDelivered={true}/><div className='card'><h4>Dynamic Product List</h4><ul className='list-group'>{products.map((p,i)=><li key={i} className='list-group-item'>{p}</li>)}</ul></div></div>}

@@ -1,0 +1,1 @@
+export default ()=> <div className='card p-4 shadow'><h2>Shopping Cart</h2><p>Your cart is empty.</p></div>;
