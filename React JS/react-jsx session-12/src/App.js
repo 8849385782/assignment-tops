@@ -1,0 +1,1 @@
+import TrendingSongs from './components/TrendingSongs';import IPLScores from './components/IPLScores';import FixedCode from './components/FixedCode';export default function App(){return <div className='container py-4'><h2>React Error Handling Assignment</h2><TrendingSongs/><IPLScores/><FixedCode/></div>}

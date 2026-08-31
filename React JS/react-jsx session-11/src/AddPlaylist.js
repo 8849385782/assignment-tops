@@ -1,0 +1,4 @@
+import {useState} from 'react';import axios from 'axios';
+export default function AddPlaylist(){const[n,sN]=useState(''),[d,sD]=useState(''),[msg,setMsg]=useState('');
+const sub=e=>{e.preventDefault();if(!n||!d){setMsg('All fields required');return;}axios.post('https://jsonplaceholder.typicode.com/posts',{name:n,description:d}).then(()=>setMsg('Playlist added successfully'));};
+return <div className='card'><h4>Add Playlist</h4><form onSubmit={sub}><input className='form-control mb-2' placeholder='Playlist Name' value={n} onChange={e=>sN(e.target.value)}/><textarea className='form-control mb-2' placeholder='Description' value={d} onChange={e=>sD(e.target.value)}/><button className='btn btn-primary'>Submit</button></form><p>{msg}</p></div>}

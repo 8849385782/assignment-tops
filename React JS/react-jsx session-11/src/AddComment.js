@@ -1,0 +1,4 @@
+import {useState} from 'react';import axios from 'axios';
+export default function AddComment(){const[u,sU]=useState(''),[c,sC]=useState(''),[r,sR]=useState(null);
+const sub=e=>{e.preventDefault();if(!u||!c)return;axios.post('https://jsonplaceholder.typicode.com/comments',{username:u,comment:c}).then(res=>sR(res.data));};
+return <div className='card'><h4>Add Comment</h4><form onSubmit={sub}><input className='form-control mb-2' value={u} onChange={e=>sU(e.target.value)} placeholder='Username'/><textarea className='form-control mb-2' value={c} onChange={e=>sC(e.target.value)} placeholder='Comment'/><button className='btn btn-success'>Post Comment</button></form>{r&&<pre>{JSON.stringify(r,null,2)}</pre>}</div>}

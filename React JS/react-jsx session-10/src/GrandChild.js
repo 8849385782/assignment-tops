@@ -1,0 +1,2 @@
+import {useContext} from "react"; import ThemeContext from "../context/ThemeContext";
+export default function GrandChild(){const {theme}=useContext(ThemeContext);return <div className="card mt-4 p-3"><h4>Deepest Child Component</h4><h5>Current Theme: {theme}</h5></div>}

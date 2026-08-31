@@ -1,0 +1,2 @@
+import {useContext} from "react"; import NotificationContext from "../context/NotificationContext";
+export default function Notification(){const {count,setCount}=useContext(NotificationContext);return <div className="card p-3 mt-4"><h4>Unread WhatsApp Messages</h4><h2>{count}</h2><button className="btn btn-success" onClick={()=>setCount(count+1)}>Receive Message</button></div>}
