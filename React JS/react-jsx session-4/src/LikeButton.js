@@ -1,0 +1,1 @@
+import {useState} from 'react';import './LikeButton.css';export default function LikeButton(){const[likes,setLikes]=useState(0);return <div className='card p-4 text-center'><h3>❤️ Like Button</h3><h1>{likes}</h1><button className='btn btn-danger' onClick={()=>setLikes(likes+1)}>❤️ Like</button></div>}

@@ -1,0 +1,1 @@
+import {useState} from 'react';import './SearchBar.css';export default function SearchBar(){const[s,setS]=useState('');return <div className='card p-3'><h3>🛒 Search</h3><input className='form-control' value={s} onChange={e=>setS(e.target.value)} placeholder='Search Product'/><p className='mt-3'>Current Search: <b>{s}</b></p></div>}
