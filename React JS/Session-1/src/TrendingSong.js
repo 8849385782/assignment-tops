@@ -1,0 +1,1 @@
+export default function TrendingSong(){return <h2 className='text-success mt-3'>Trending on Spotify: Calm Down</h2>;}
