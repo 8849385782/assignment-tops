@@ -1,1 +1,0 @@
-Setup:\n1. Install Node.js\n2. Run: npx create-react-app InstaCloneStarter (or use this project)\n3. npm install\n4. npm start

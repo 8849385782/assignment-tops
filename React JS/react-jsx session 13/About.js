@@ -1,1 +1,0 @@
-export default function About(){return <div className='card p-3'><h2>About</h2><p>Created with React, Bootstrap and React Router.</p></div>}
